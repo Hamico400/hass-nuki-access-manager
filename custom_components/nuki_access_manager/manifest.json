@@ -1,0 +1,10 @@
+{
+  "domain": "nuki_access_manager",
+  "name": "Nuki Berechtigungsverwaltung",
+  "version": "1.0.0",
+  "config_flow": true,
+  "documentation": "https://github.com/Hamico400/home-assistant-gelbke",
+  "dependencies": ["nuki_ng"],
+  "iot_class": "cloud_polling",
+  "codeowners": ["@Hamico400"]
+}

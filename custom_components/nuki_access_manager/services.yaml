@@ -1,0 +1,98 @@
+backup_now:
+  name: Berechtigungen jetzt sichern
+  description: Erstellt einen neuen lokalen Sicherungsstand ohne PINs und API-Token.
+  fields:
+    entry_id:
+      name: Verwaltung
+      description: ID der Nuki-Berechtigungsverwaltung.
+      required: true
+      selector:
+        text:
+
+update_authorization:
+  name: Berechtigung ändern
+  description: Sichert den aktuellen Stand, ändert eine Berechtigung und prüft das Ergebnis bei Nuki.
+  fields:
+    entry_id:
+      name: Verwaltung
+      required: true
+      selector:
+        text:
+    device_id:
+      name: Nuki-Gerät
+      required: true
+      selector:
+        text:
+    authorization_id:
+      name: Berechtigungs-ID
+      required: true
+      selector:
+        text:
+    name:
+      name: Name
+      selector:
+        text:
+    enabled:
+      name: Aktiv
+      selector:
+        boolean:
+    remoteAllowed:
+      name: Fernzugriff erlaubt
+      selector:
+        boolean:
+    allowedFromDate:
+      name: Gültig ab
+      selector:
+        datetime:
+    allowedUntilDate:
+      name: Gültig bis
+      selector:
+        datetime:
+
+create_keypad_authorization:
+  name: Neuen Keypad-Zugang anlegen
+  description: Legt einen Zugang an. Der Code wird nur an Nuki übertragen und nicht gespeichert oder protokolliert.
+  fields:
+    entry_id:
+      name: Verwaltung
+      required: true
+      selector:
+        text:
+    device_id:
+      name: Nuki-Gerät
+      required: true
+      selector:
+        text:
+    name:
+      name: Name
+      required: true
+      selector:
+        text:
+    code:
+      name: Neuer sechsstelliger Code
+      required: true
+      selector:
+        number:
+          min: 111111
+          max: 999999
+          mode: box
+
+delete_authorization:
+  name: Berechtigung löschen
+  description: Erstellt zuerst eine Metadaten-Sicherung und löscht danach die Berechtigung bei Nuki. Bestehende PIN-Ziffern sind nicht wiederherstellbar.
+  fields:
+    entry_id:
+      name: Verwaltung
+      required: true
+      selector:
+        text:
+    device_id:
+      name: Nuki-Gerät
+      required: true
+      selector:
+        text:
+    authorization_id:
+      name: Berechtigungs-ID
+      required: true
+      selector:
+        text:

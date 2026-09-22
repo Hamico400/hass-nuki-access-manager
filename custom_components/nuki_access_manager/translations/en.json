@@ -1,0 +1,18 @@
+{
+  "title": "Nuki Access Manager",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Import Nuki authorizations",
+        "description": "Select the existing Nuki integration. PINs and API tokens are never backed up.",
+        "data": {
+          "nuki_entry_id": "Nuki integration"
+        }
+      }
+    },
+    "abort": {
+      "nuki_not_configured": "No Nuki integration is configured.",
+      "already_configured": "This Nuki integration is already managed."
+    }
+  }
+}

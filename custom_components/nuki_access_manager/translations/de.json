@@ -1,0 +1,18 @@
+{
+  "title": "Nuki Berechtigungsverwaltung",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nuki-Berechtigungen übernehmen",
+        "description": "Wähle die vorhandene Nuki-Integration. Geheimzahlen und API-Token werden niemals gesichert.",
+        "data": {
+          "nuki_entry_id": "Nuki-Integration"
+        }
+      }
+    },
+    "abort": {
+      "nuki_not_configured": "Es ist noch keine Nuki-Integration eingerichtet.",
+      "already_configured": "Diese Nuki-Integration wird bereits verwaltet."
+    }
+  }
+}
